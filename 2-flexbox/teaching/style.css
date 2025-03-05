@@ -1,0 +1,41 @@
+/* wildcard element reset */
+/* * is going to select all element */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.parent {
+  width: 500px;
+  height: 500px;
+  background-color: yellow;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+
+  /* flex */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  /* extra property of a flexbox */
+  /* gap: 10px; */
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}

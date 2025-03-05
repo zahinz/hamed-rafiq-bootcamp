@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* dev mode */
+  /* border-style: solid;
+  border-color: red;
+  border-width: 1px; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+section.hero {
+  background-color: orange;
+  height: 600px;
+}
+
+section.hero > div {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.hero > div.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+section.hero > div.header > div.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+section.hero > div.header > div.left > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+section.hero > div.header > div.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+section.hero > div.header > div.right > button.login {
+  all: unset;
+  color: white;
+}
+
+section.hero > div.header > div.right > button.register {
+  all: unset;
+  color: white;
+  background-color: blue;
+  padding: 16px;
+  border-radius: 4px;
+}
