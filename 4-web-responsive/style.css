@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: #e9ecef;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+header > div.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+header > div.left > h1 {
+  font-size: 18px;
+}
+
+header > div.right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+header > div.right > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+
+header > div.right > ul > li > a {
+  text-decoration: none;
+  color: #000;
+}
+
+header > div.right > img {
+  /* This hide the search icon hidden when desktop */
+  display: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: white;
+}
+
+header > div.right > input {
+  all: unset;
+  width: 70px;
+  border-style: none;
+  padding: 6px 12px;
+  border-radius: 32px;
+  background-color: white;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ced4da;
+  border-top-style: solid;
+  border-top-width: 6px;
+  border-color: black;
+  padding: 24px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 32px;
+}
+
+footer > div > div.info > p.top {
+  font-weight: bold;
+  font-size: 18px;
+}
+footer > div > div.info > p.bottom {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/* Responsive web design media query */
+/* MOBILE STYLING */
+@media (max-width: 600px) {
+  header > div.right > ul {
+    display: none;
+  }
+  header > div.right > input {
+    display: none;
+  }
+  header > div.right > img {
+    display: block;
+  }
+}
