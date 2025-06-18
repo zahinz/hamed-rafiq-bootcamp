@@ -9,6 +9,10 @@
   </head>
   <body>
     <h1>Pacman</h1>
+    <div class="game-info">
+      <div id="score">Score: 0</div>
+      <div id="timer">Time: 0s</div>
+    </div>
     <div id="gamefield">
       <img
         id="pacman"
@@ -23,6 +27,18 @@
       <button id="down">Down</button>
       <button id="left">Left</button>
       <button id="right">Right</button>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal">
+      <div class="modal-content">
+        <h2>GAME OVER!</h2>
+        <p id="finalScore">Your Score: 0</p>
+        <p id="finalTime">Total Time: 0s</p>
+        <p id="timeBonus">Time Bonus: 0</p>
+        <p id="gameOverMessage">You were caught by a ghost!</p>
+        <button id="playAgainBtn">Play Again</button>
+      </div>
     </div>
   </body>
 </html>
