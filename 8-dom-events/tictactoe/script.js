@@ -26,48 +26,93 @@ function switchPlayer() {
   }
 }
 
+function checkCell(cell) {
+  // Check if the cell already has a symbol
+  if (cell.innerText !== "") {
+    console.log("Cell already has a symbol, cannot click.");
+    return true; // Cell is occupied
+  }
+  return false; // Cell is empty
+}
+
 cell0.addEventListener("click", function () {
   console.log("Cell 0 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell0)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell0.innerText = currentSymbol;
   switchPlayer();
 });
 cell1.addEventListener("click", function () {
   console.log("Cell 1 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell1)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell1.innerText = currentSymbol;
   switchPlayer();
 });
 cell2.addEventListener("click", function () {
   console.log("Cell 2 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell2)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell2.innerText = currentSymbol;
   switchPlayer();
 });
 cell3.addEventListener("click", function () {
   console.log("Cell 3 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell2)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell3.innerText = currentSymbol;
   switchPlayer();
 });
 cell4.addEventListener("click", function () {
   console.log("Cell 4 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell2)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell4.innerText = currentSymbol;
   switchPlayer();
 });
 cell5.addEventListener("click", function () {
   console.log("Cell 5 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell2)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell5.innerText = currentSymbol;
   switchPlayer();
 });
 cell6.addEventListener("click", function () {
   console.log("Cell 6 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell2)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell6.innerText = currentSymbol;
   switchPlayer();
 });
 cell7.addEventListener("click", function () {
   console.log("Cell 7 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell2)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell7.innerText = currentSymbol;
   switchPlayer();
 });
 cell8.addEventListener("click", function () {
   console.log("Cell 8 clicked");
+  // early return if the cell already has a symbol
+  if (checkCell(cell2)) {
+    return; // Exit the function if the cell is occupied
+  }
   cell8.innerText = currentSymbol;
   switchPlayer();
 });

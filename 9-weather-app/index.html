@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Weather App</h1>
+        <p>
+          Welcome to my weather app! Here you can find the current weather
+          conditions for any city.
+        </p>
+        <form id="weatherForm">
+          <input
+            type="text"
+            name="city"
+            placeholder="Enter city name"
+            required
+          />
+          <button type="submit">Get Weather</button>
+        </form>
+        <div id="weatherResult">
+          <p id="cityText">CITY NAME DISPLAY HERE</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
