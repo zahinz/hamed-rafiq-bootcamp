@@ -20,3 +20,16 @@ weatherForm.addEventListener("submit", function (event) {
 
   console.log("Form submitted");
 });
+
+// assignment
+// create a BMI calculator form
+// the form should have two inputs: weight and height
+// when the form is submitted, calculate the BMI and display it in a div with id "bmiResult"
+// the formula for BMI is weight (kg) / (height (m) * height (m))
+
+// advanced assignment
+// classify the BMI result into categories:
+// Underweight: BMI < 18.5
+// Normal weight: 18.5 <= BMI < 24.9
+// Overweight: 25 <= BMI < 29.9
+// Obesity: BMI >= 30
