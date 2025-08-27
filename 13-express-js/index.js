@@ -13,7 +13,6 @@ server.get("/", function (req, res) {
   // get the absolute path of the html file
   // path is core module of nodejs which we imported above
   // path module helps to create path in a cross platform way (mac - /pages/index.html, windows - \pages\index.html)
-  console.log(__dirname);
   const htmlPath = path.join(__dirname, "pages", "index.html");
   // respond with the html file using sendFile method of res object
   res.sendFile(htmlPath);
