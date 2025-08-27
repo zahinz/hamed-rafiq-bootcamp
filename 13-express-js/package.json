@@ -1,0 +1,16 @@
+{
+  "name": "http-express-js",
+  "version": "1.0.0",
+  "description": "This is my first http express js server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "author": "zahinz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
