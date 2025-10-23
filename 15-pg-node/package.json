@@ -1,0 +1,17 @@
+{
+  "name": "postgres-node-js",
+  "version": "1.0.0",
+  "description": "My first node js postgres app",
+  "license": "ISC",
+  "author": "zahinz",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
