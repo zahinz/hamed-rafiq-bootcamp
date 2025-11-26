@@ -8,6 +8,9 @@ getDatabaseStatus();
 const app = express();
 const PORT = 8888;
 
+// middleware to parse JSON request bodies
+app.use(express.json());
+
 // declaring the routes from routes/index.js
 // nested routes is also possible like: app.use('/api', apiRoutes);
 app.use("/api", apiRoutes);
