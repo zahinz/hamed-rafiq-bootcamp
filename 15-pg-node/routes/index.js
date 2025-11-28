@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { 
+import {
   getAllUsersController,
   getUserByIdController,
   createUserController,
   updateUserController,
-  deleteUserController
+  deleteUserController,
 } from "../controllers/users.js";
-
+import { registerController, loginController } from "../controllers/auth.js";
 const apiRoutes = Router();
 
 // Health check routes
@@ -24,5 +24,9 @@ apiRoutes.get("/users/:id", getUserByIdController);
 apiRoutes.post("/users", createUserController);
 apiRoutes.put("/users/:id", updateUserController);
 apiRoutes.delete("/users/:id", deleteUserController);
+
+// auth routes
+apiRoutes.post("/auth/register", registerController);
+apiRoutes.post("/auth/login", loginController);
 
 export default apiRoutes;

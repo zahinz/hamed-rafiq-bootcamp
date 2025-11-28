@@ -1,0 +1,18 @@
+meta {
+  name: Login existing user
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:8888/api/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "zzzz@m.com",
+    "password": "abcd1234"
+  }
+}
