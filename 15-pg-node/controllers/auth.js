@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 import { registerUser, getUserByEmail } from "../database/auth.js";
 
 export async function registerController(req, res) {
@@ -49,9 +50,37 @@ export async function loginController(req, res) {
       return res.status(401).json({ error: "Invalid email or password" });
     }
 
-    return res.status(200).json(user);
+    // generate a token
+    const token = jwt.sign(
+      // the elements that are going to be stored in the token
+      { id: user.id, email: user.email, timestamp: Date.now() },
+      "mak-kau-hijau",
+      {
+        expiresIn: "1h",
+      }
+    );
+    console.log("TOKEN:", token);
+    console.log("===============================================");
+
+    return res.status(200).json({ token });
   } catch (error) {
     console.error("ERROR LOGINING USER:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+}
+
+export async function myAccountController(req, res) {
+  try {
+    // handle bearer token
+    // this can be done using middleware
+    const token = req.headers.authorization.split(" ")[1];
+    if (!token) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+    const decoded = jwt.verify(token, "mak-kau-hijau");
+    return res.status(200).json({ decoded });
+  } catch (error) {
+    console.error("ERROR GETTING MY ACCOUNT:", error);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 }

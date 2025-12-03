@@ -6,7 +6,11 @@ import {
   updateUserController,
   deleteUserController,
 } from "../controllers/users.js";
-import { registerController, loginController } from "../controllers/auth.js";
+import {
+  registerController,
+  loginController,
+  myAccountController,
+} from "../controllers/auth.js";
 const apiRoutes = Router();
 
 // Health check routes
@@ -28,5 +32,6 @@ apiRoutes.delete("/users/:id", deleteUserController);
 // auth routes
 apiRoutes.post("/auth/register", registerController);
 apiRoutes.post("/auth/login", loginController);
+apiRoutes.post("/auth/my-account", myAccountController);
 
 export default apiRoutes;

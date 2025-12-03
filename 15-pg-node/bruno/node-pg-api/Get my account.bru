@@ -1,0 +1,15 @@
+meta {
+  name: Get my account
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:8888/api/auth/my-account
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJyYWZpcUBjaWMuY29tIiwidGltZXN0YW1wIjoxNzY0NzcxNjExMDMyLCJpYXQiOjE3NjQ3NzE2MTEsImV4cCI6MTc2NDc3NTIxMX0.Z-rN5Mk6V5l8BZ_Ub4k6jGJsSySqN98dAo4NmCX1jSo
+}
